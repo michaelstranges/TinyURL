@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>My TinyApp</title>
+  </head>
+
+  <body>
+    <header>
+      <% include ./partials/_header.ejs %>
+    </header>
+    <br>
+      <form action="/urls/new">
+        <input type="submit" value="Shorten a Link!">
+      </form>
+
+    <% for (userID in urls){ %>
+      <% if(userID === user.id){ %>
+        <% for(links in urls[userID]){ %>
+              <ul>
+                <form method="POST" action= <%= `/urls/${links}/delete` %>>
+                <li>
+                  <button type="submit">Delete</button>
+                  <a href=<%= `/urls/${links}` %>>Edit</a>
+                  <%= "id: " + links + " " + urls[userID][links] %>
+               </li>
+               </form>
+              </ul>
+         <% } %>
+      <%} %>
+  <% } %>
+
+
+
+    <br>
+
+    <br>
+
+  </body>
+
+</html>
