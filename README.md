@@ -26,3 +26,5 @@ As a registered user, you will be able to utilize the tool and store your links 
 - Install all dependencies (using the `npm install` command).
 - Run the development web server using the `node express_server.js` command
 - A message on your console screen will show that the server is listening, and through which port it is listening through.
+
+NOTE: TinyApp was originally created as a sub folder in a repository.  The link here: https://github.com/michaelstranges/W2-Work/tree/master/TinyApp is to the original location.  This new location submitted is a stand alone repo.
